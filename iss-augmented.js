@@ -20,7 +20,7 @@ var distance = function(lat1, lat2, lon1, lon2, city) {
 
     var d = R * c;
 
-    console.log("The distance from " + city + " to the ISS is " + (d = R * c).toFixed(2));
+    console.log("The distance from " + city + " to the ISS is " + (d = R * c).toFixed(2) + " metres.");
 
 };
 
