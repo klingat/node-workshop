@@ -43,17 +43,24 @@ function guessGame() {
                 // console.log("This is the randomNum", randomNum)
 
                 if (Number(answers.number) === randomNum) {
-                    console.log("You win!");
+                    console.log("YOU WIN!");
                 }
                 else {
-                    console.log("You lose! Guess again.");
-
+                    console.log("Wrong!");
+                    
+                    if (Number(answers.number) < randomNum) {
+                        console.log("The number you guessed is too low.")
+                    }
+                    if (Number(answers.number) > randomNum) {
+                        console.log("The number you guessed is too high.")
+                    }
                     if (counter > 0) {
                         counter--;
+                        console.log("Try again!");
                         runGame();
                     }
                     else {
-                        console.log("You used up all your guesses! You lose!")
+                        console.log("You used up all your guesses! You lose! The number was " + randomNum + "...")
                     }
                 }
             }
